@@ -68,7 +68,6 @@ export async function generatePlan(idea: string): Promise<ProjectPlan> {
   if (!key || key === "AQ.Ab8RN6IL-AnnVqLvUZxkALLiER_CqITg_hWmbNeOu-4bV63xIg") {
     throw new Error("Missing API key. Add VITE_GEMINI_API_KEY to your .env file and restart npm run dev.");
   }
-
   const res = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`,
     {
