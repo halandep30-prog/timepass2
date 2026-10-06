@@ -1,6 +1,6 @@
 import type { ProjectPlan } from "./types";
 
-const MODEL = "gemini-2.5-flash";
+const MODEL = "gemini-3.8-flash";
 
 const SYSTEM_PROMPT = `You are a college project architect. Help students transform project ideas into realistic final-year software projects. Recommend technologies appropriate for their skill level and project complexity. Keep suggestions practical and achievable.
 
@@ -65,7 +65,7 @@ function normalize(raw: any): ProjectPlan {
 
 export async function generatePlan(idea: string): Promise<ProjectPlan> {
   const key = import.meta.env.VITE_GEMINI_API_KEY as string | undefined;
-  if (!key || key === "your_gemini_api_key_here") {
+  if (!key || key === "AQ.Ab8RN6IL-AnnVqLvUZxkALLiER_CqITg_hWmbNeOu-4bV63xIg") {
     throw new Error("Missing API key. Add VITE_GEMINI_API_KEY to your .env file and restart npm run dev.");
   }
 
